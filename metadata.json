@@ -1,0 +1,6 @@
+{
+  "name": "CORE - Community Offroad Rally & Explore",
+  "description": "Website resmi komunitas In Character CORE (Community Offroad Rally & Explore) - Jogjagamers Roleplay.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

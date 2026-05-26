@@ -24,6 +24,6 @@ export const siteConfig: SiteConfig = {
     { label: "Penjelajahan Jalur", value: "45+ Trip" },
     { label: "Anggota Aktif", value: "30+ Rider" },
     { label: "Rute Terpetakan", value: "15+ Route" },
-    { label: "Basecamp", value: "Flint Co." }
+    { label: "Basecamp", value: "Argyle Road Fort Carson No. 5" }
   ]
 };

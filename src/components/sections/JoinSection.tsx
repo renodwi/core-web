@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
-import { Check, Compass, Landmark, Terminal, Users } from "lucide-react";
+import { Check, Compass, Landmark, Terminal, Users, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "../../data/site";
-import { Button } from "../ui/Button";
 
 export function JoinSection() {
   const reqs = [
@@ -11,21 +10,6 @@ export function JoinSection() {
     "Mengutamakan keselamatan personil, kelestarian lingkungan, dan solidaritas tim.",
     "Wajib bersedia mengikuti briefing jalur dan regulasi keselamatan sebelum roda berputar."
   ];
-
-  const handleScrollToContact = () => {
-    const element = document.querySelector("#contact");
-    if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
-  };
 
   return (
     <section id="join" className="py-24 bg-core-dark relative overflow-hidden">
@@ -50,26 +34,45 @@ export function JoinSection() {
             </span>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-core-primary tracking-tight leading-tight">
-              Siap Menjadi Bagian dari CORE?
+              Temukan kami di Fort Carson!
             </h2>
 
             <p className="text-core-secondary text-sm leading-relaxed">
               Jika kamu memiliki ketertarikan tinggi pada dunia otomotif offroad, hasrat kuat untuk mengeksplor rute alam terbuka, serta komitmen tinggi menjaga keselamatan dan solidaritas kelompok, maka barisan kemudi CORE selalu terbuka menyambutmu.
             </p>
+            
+            {/* Map Section */}
+            <div className="border border-core-border/70 rounded-xl overflow-hidden bg-stone-950/40 p-3 shadow-xl backdrop-blur-xs">
+              <div className="text-[10px] font-mono text-stone-400 uppercase tracking-widest mb-2 flex justify-between items-center border-b border-stone-800/60 pb-1.5 px-0.5">
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-core-warm animate-pulse" />
+                  PETA KOORDINAT BASECAMP
+                </span>
+                <span className="text-core-warm/80 font-bold">FORT CARSON HQ</span>
+              </div>
+              <div className="relative group overflow-hidden rounded-lg border border-stone-900">
+                <img
+                  src="/gallery/mappoint.webp"
+                  alt="Peta Lokasi Fort Carson"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-auto object-cover aspect-video transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute bottom-2 left-2 px-2 py-1 bg-stone-950/85 border border-stone-800 rounded text-[9px] font-mono text-stone-300 backdrop-blur-xs">
+                  Sektor Barat Daya Fort Carson No. 5
+                </div>
+              </div>
+            </div>
 
-            <p className="text-core-secondary text-sm leading-relaxed">
-              Kami menyaring pendaftar berdasarkan kontribusi perilaku yang baik saat berada di lapangan (In Character). Tidak peduli tipe kendaraan apa yang kamu miliki selama mobil tersebut tangguh melibas medan berlumpur atau berpasir, silakan ajukan nama keanggotaanmu.
-            </p>
-
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Button
-                onClick={handleScrollToContact}
-                variant="primary"
-                size="md"
-                className="font-bold flex items-center gap-2 group"
+            <div className="flex flex-wrap gap-4 pt-2">
+              <motion.a
+                whileTap={{ scale: 0.97 }}
+                href={siteConfig.joinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center font-display font-bold uppercase tracking-wider transition-all duration-300 focus:outline-hidden focus:ring-2 focus:ring-core-warm/40 rounded-md cursor-pointer bg-gradient-to-r from-core-brown to-core-warm text-core-primary shadow-xl shadow-core-brown/40 hover:from-core-warm hover:to-core-brown px-10 py-4 text-base gap-2 group text-center"
               >
-                Ajukan Keanggotaan <Check className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              </Button>
+                Daftar <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </motion.a>
             </div>
           </motion.div>
 

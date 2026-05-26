@@ -139,7 +139,7 @@ export function Navbar() {
                 rel="noopener noreferrer"
                 className="w-full text-center inline-flex items-center justify-center gap-1 bg-gradient-to-r from-core-brown to-core-warm text-core-bg font-display text-xs font-bold tracking-widest uppercase py-3 rounded-md transition-all duration-200 cursor-pointer"
               >
-                Ajukan Keanggotaan <ArrowUpRight className="w-4 h-4" />
+                Daftar <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
           </motion.div>

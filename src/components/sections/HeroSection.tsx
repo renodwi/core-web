@@ -1,9 +1,29 @@
-import { motion } from "motion/react";
+import * as React from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, Compass, ShieldAlert, Zap } from "lucide-react";
 import { siteConfig } from "../../data/site";
 import { Button } from "../ui/Button";
+import { galleryItems } from "../../data/gallery";
 
 export function HeroSection() {
+  const [currentIndex, setCurrentIndex] = React.useState(() => {
+    return Math.floor(Math.random() * galleryItems.length);
+  });
+
+  React.useEffect(() => {
+    if (galleryItems.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        let nextIndex = prevIndex;
+        while (nextIndex === prevIndex) {
+          nextIndex = Math.floor(Math.random() * galleryItems.length);
+        }
+        return nextIndex;
+      });
+    }, 5000); // changes every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   const triggerScroll = (targetId: string) => {
     const element = document.querySelector(targetId);
     if (element) {
@@ -25,25 +45,46 @@ export function HeroSection() {
       className="min-h-screen relative flex items-center justify-center pt-24 pb-12 overflow-hidden bg-core-bg selection:bg-core-warm selection:text-core-bg"
     >
       {/* Immersive background layout design */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Dynamic Background Slideshow */}
+        <AnimatePresence mode="popLayout">
+          {galleryItems.length > 0 && (
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 0.35, scale: 1 }} // Low opacity (35%) keeps content readable and dark theme cohesive
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 1.6, ease: "easeInOut" }}
+              className="absolute inset-0 w-full h-full"
+            >
+              <img
+                src={galleryItems[currentIndex].imagePath}
+                alt="CORE Hero BG"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Gradasi semakin pudar kebawah / semakin gelap kebawah agar tulisan tetap kelihatan */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/75 to-core-bg z-[1]" />
+
         {/* Subtle grid pattern overlay */}
         <div 
-          className="absolute inset-0 opacity-15 pointer-events-none"
+          className="absolute inset-0 opacity-15 pointer-events-none z-[2]"
           style={{
             backgroundImage: "linear-gradient(to right, rgba(139, 94, 60, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(139, 94, 60, 0.1) 1px, transparent 1px)",
             backgroundSize: "4rem 4rem"
           }}
         />
         
-        {/* Dark radial glow */}
-        <div className="absolute inset-0 bg-radial-at-c from-core-brown/20 via-black/80 to-core-bg" />
-        
         {/* Glowing magma-like visual orbs */}
-        <div className="absolute bottom-[-10%] right-[10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] rounded-full bg-core-brown/10 blur-[130px]" />
-        <div className="absolute top-[-5%] left-[-5%] w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] rounded-full bg-core-warm/5 blur-[120px]" />
+        <div className="absolute bottom-[-10%] right-[10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] rounded-full bg-core-brown/10 blur-[130px] z-[2]" />
+        <div className="absolute top-[-5%] left-[-5%] w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] rounded-full bg-core-warm/5 blur-[120px] z-[2]" />
 
         {/* Rugged typographic overlay background behind main title */}
-        <div className="absolute inset-x-0 bottom-10 flex justify-center pointer-events-none select-none opacity-[0.02]">
+        <div className="absolute inset-x-0 bottom-10 flex justify-center pointer-events-none select-none opacity-[0.02] z-[2]">
           <span className="font-display font-extrabold text-[18vw] leading-none text-core-primary tracking-widest uppercase">
             RUGGED
           </span>

@@ -40,7 +40,7 @@ export function Footer() {
 
             <div className="flex items-center gap-2 mt-2 text-stone-600 text-xs font-mono">
               <MapPin className="w-3.5 h-3.5 text-core-brown/60" />
-              <span>Flint County Basecamp, JGRP Territory</span>
+              <span>Argyle Road Fort Carson No. 5, JGRP Territory</span>
             </div>
           </div>
 

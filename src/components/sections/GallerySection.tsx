@@ -182,14 +182,6 @@ export function GallerySection() {
                       {selectedItem.description}
                     </p>
                   </div>
-
-                  {/* Operational guidance details */}
-                  <div className="pt-6 border-t border-stone-900 mt-6 md:mt-2">
-                    <div className="flex justify-between items-center text-[10px] font-mono text-stone-500">
-                      <span>MEMBER LEVEL REQ:</span>
-                      <span className="text-core-primary font-bold">ANY ACTIVE RANK</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </motion.div>

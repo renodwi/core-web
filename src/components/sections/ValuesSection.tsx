@@ -4,28 +4,32 @@ import { Heart, Compass, Shield, Eye } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "../ui/Card";
 
 export function ValuesSection() {
-  const values = [
+    const values = [
     {
       title: "Respect the Route",
-      description: "Menghargai setiap jalur lintasan alami, menjaga kelestarian lingkungan sekitar, serta bersikap ramah terhadap warga setempat yang kami temui selama perjalanan ekspedisi.",
+      description:
+        "Setiap jalur punya cerita. Kami menikmati alam tanpa meninggalkan jejak buruk, tetap menghormati warga lokal, dan menjaga trek agar tetap bisa dinikmati generasi berikutnya.",
       icon: Compass,
       accent: "border-t-2 border-t-amber-500"
     },
     {
       title: "No One Left Behind",
-      description: "Setiap perjalanan dilakukan secara utuh dari titik start sampai finish. Apabila terjadi kendala mesin atau pecah ban di jalan, semua convoy berhenti demi memberikan bantuan gratis.",
+      description:
+        "Di CORE, perjalanan bukan soal siapa paling cepat sampai finish. Saat ada kendaraan stuck, pecah ban, atau trouble mesin, seluruh tim siap turun tangan sampai semua bisa lanjut jalan lagi.",
       icon: Heart,
       accent: "border-t-2 border-t-red-500"
     },
     {
       title: "Drive with Discipline",
-      description: "Kebebasan memacu kecepatan kendaraan tetap wajib diimbangi tanggung jawab moral, mematuhi instruksi ketua convoy, serta menjaga jarak aman antar bemper mobil offroad.",
+      description:
+        "Offroad memang penuh adrenalin, tapi tetap ada ritme dan aturan. Jaga komunikasi, pahami jalur, hormati leader convoy, dan selalu utamakan keselamatan seluruh tim.",
       icon: Shield,
       accent: "border-t-2 border-t-orange-500"
     },
     {
       title: "Explore with Purpose",
-      description: "Tidak sekadar membakar bahan bakar, setiap perjalanan rutin memiliki misi yang jelas: memetakan koordinat peta, mengumpulkan arsip galeri dokumentasi, dan mempererat silaturahmi.",
+      description:
+        "Setiap explore membawa pengalaman baru. Dari membuka rute, berbagi dokumentasi perjalanan, sampai membangun komunitas yang solid di dalam maupun di luar jalur offroad.",
       icon: Eye,
       accent: "border-t-2 border-t-yellow-600"
     }

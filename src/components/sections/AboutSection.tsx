@@ -34,7 +34,7 @@ export function AboutSection() {
         <SectionHeader
           badge="PROFIL UTAMA"
           title="Mengenal CORE Lebih Dekat"
-          description="Komunitas pengendara tangguh pelintas batas yang dirancang murni dalam dunia karakter (In Character) untuk menyatukan jiwa petualang."
+          description="Komunitas pengendara tangguh pelintas batas yang dirancang untuk menyatukan jiwa petualang."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -51,10 +51,10 @@ export function AboutSection() {
                 Kebebasan di Setiap Hambatan Rute Jalan Raya & Hutan
               </h3>
               <p className="text-sm text-core-secondary leading-relaxed">
-                **CORE — Community Offroad Rally & Explore** lahir dari mimpi bersama para warga yang menggemari petualangan berkendara bebas di alam lepas. Kami bukan sekadar perkumpulan pemilik kendaraan bermesin besar; kami adalah keluarga yang diikat oleh debu tebing tinggi, deru knalpot gahar, dan persahabatan di sepanjang rute.
+                <span className="font-semibold">CORE — Community Offroad Rally & Explore</span> lahir dari mimpi bersama para warga yang menggemari petualangan berkendara bebas di alam lepas. Kami bukan sekadar perkumpulan pemilik kendaraan bermesin besar; kami adalah keluarga yang diikat oleh debu tebing tinggi dan persahabatan di sepanjang rute.
               </p>
               <p className="text-sm text-core-secondary leading-relaxed">
-                Kegiatan kami meliputi eksporasi jalur alam perbukitan curam, rally lintas pedesaan ringan, convoy malam melintasi aspal lembab Flint County, sesi berkumpul basecamp otomotif, hingga camping di tepi danau. Kami mengutamakan kepatuhan, ketertiban, dan disiplin tinggi di setiap rute daki.
+                Kegiatan kami meliputi eksporasi jalur alam perbukitan curam, rally lintas pedesaan, convoy malam melintasi aspal lembab, berkumpul basecamp otomotif, hingga camping di tepi danau. Kami mengutamakan kepatuhan, ketertiban, dan disiplin tinggi di setiap rute.
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export function AboutSection() {
             <div className="p-4 rounded-lg bg-core-card/50 border-l-2 border-core-warm text-xs italic text-core-primary/90 leading-relaxed">
               &ldquo;Jalur petualangan mungkin bergelombang dan penuh tebing curam, namun kekerabatan di dalam CORE senantiasa meratakan semua tantangan tersebut.&rdquo;
               <span className="block mt-1.5 font-mono text-[9px] uppercase tracking-wider text-core-warm not-italic font-bold">
-                — Skuad Perintis CORE, JGRP
+                — Yuichi Hugosaki, CORE Leader
               </span>
             </div>
           </motion.div>

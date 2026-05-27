@@ -88,11 +88,11 @@ export function JoinSection() {
               {/* Paper Folder Decor Overlay */}
               <div className="absolute top-0 right-0 py-1.5 px-4 bg-core-brown text-[#0d0d0d] font-mono text-[9px] uppercase font-bold tracking-widest rounded-bl-lg flex items-center gap-1.5">
                 <Terminal className="w-3 h-3" />
-                <span>MEMBERSHIP REQ - DRAFT CODEX</span>
+                <span>JOIN CORE SEKARANG!</span>
               </div>
 
               <h3 className="font-display font-bold text-lg text-core-primary uppercase tracking-wider mb-6 pb-2 border-b border-stone-900">
-                Syarat Kelayakan In Character
+                Syarat Kelayakan
               </h3>
 
               <div className="space-y-5">
